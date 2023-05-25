@@ -1,0 +1,4 @@
+while true; do
+	xsetroot -name "$(free -m | grep em | tr -s ' ' | cut -d ' ' -f 3)$(echo "MB | Charge: ")$(cat /sys/class/power_supply/BAT1/capacity)$(echo "% | ")$(date +%A" "%d" "%B" "%H:%M)"
+	sleep 5;
+done
